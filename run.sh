@@ -1,3 +1,5 @@
+BASEDIR=$(dirname $0)
+
 docker run -d \
   --name=wireguard \
   --cap-add=NET_ADMIN \
@@ -14,8 +16,8 @@ docker run -d \
   -e PERSISTENTKEEPALIVE_PEERS= \
   -e LOG_CONFS=true  \
   -p 51820:51820/udp \
-  -v ./config:/config \
+  -v $BASEDIR/config:/config \
   --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
   --restart unless-stopped \
-  linuxserver/wireguard
-~                             
+  linuxserver/wireguard    
+
