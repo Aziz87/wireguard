@@ -2,7 +2,15 @@ docker exec -it wireguard sh -c "umask 077 & mkdir /config/$1 && wg genpsk > /co
 privateKey=$(cat "config/$1/privatekey")
 publicKey=$(cat "config/$1/publickey")
 presharedKey=$(cat "config/$1/presharedkey")
-echo \''{"publicKey":"'"$publicKey"'","privateKey":"'"$privateKey"'","presharedKey":"'"$preharedKey"'"}'\'
 
+json=$(cat <<-END
+    {
+        "publicKey": "${publicKey}", 
+        "privateKey": "${privateKey}", 
+        "preharedKey": "${preharedKey}", 
+    }
+END
+)
+echo json
 
 
