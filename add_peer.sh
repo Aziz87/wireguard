@@ -6,8 +6,6 @@ ip=$2
 echo "publickey $publickey"
 echo "privatekey $privatekey"
 echo "presharedkey $presharedkey"
-docker exec -it wireguard sh -c "wg set wg0 peer $publickey allowed-ips $ip preshared-key $presharedkey"
-
 echo "
 
 [Peer]
