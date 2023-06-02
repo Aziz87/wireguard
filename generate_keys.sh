@@ -4,6 +4,7 @@ privateKey=$(cat "/wireguard/config/$1/privatekey")
 publicKey=$(cat "/wireguard/config/$1/publickey")
 presharedKey=$(cat "/wireguard/config/$1/presharedkey")
 
-echo "$publicKey,$privateKey,$presharedKey"
-
+echo "publickey $publickey"
+echo "privatekey $privatekey"
+echo "presharedkey $presharedkey"
 
