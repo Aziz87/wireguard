@@ -3,14 +3,6 @@ privateKey=$(cat "config/$1/privatekey")
 publicKey=$(cat "config/$1/publickey")
 presharedKey=$(cat "config/$1/presharedkey")
 
-json=$(cat <<-END
-    {
-        "publicKey": "${publicKey}", 
-        "privateKey": "${privateKey}", 
-        "preharedKey": "${preharedKey}", 
-    }
-END
-)
-echo json
+echo "$publicKey,$privateKey,$preharedKey"
 
 
