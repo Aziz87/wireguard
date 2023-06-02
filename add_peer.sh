@@ -12,6 +12,6 @@ echo "
 # $1
 PublicKey = $publickey
 PresharedKey = $presharedkey
-AllowedIPs = $ip
+AllowedIPs = $ip/32
 " >> config/wg0.conf
 
