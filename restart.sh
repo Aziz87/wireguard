@@ -1,1 +1,1 @@
-docker restart wireguard &
+docker restart wireguard & echo "ok"
