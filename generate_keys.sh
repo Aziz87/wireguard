@@ -1,4 +1,3 @@
-name=$1
 docker exec -it wireguard sh -c ""umask 077 & mkdir /config/$name && wg genpsk > /config/$name/presharedkey && wg genkey | tee /config/$name/privatekey | wg pubkey > /config/$name/publickey""
 
 list=$(ls "config")
