@@ -8,4 +8,4 @@ presharedKey=$(cat "config/$name/presharedkey")
 echo "publickey $publickey"
 echo "privatekey $privatekey"
 echo "presharedkey $presharedkey"
-echo "ls $list"
+echo "ls---- $list"
