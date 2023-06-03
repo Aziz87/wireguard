@@ -1,9 +1,10 @@
-docker exec -it wireguard sh -c "umask 077 & mkdir /config/$1 && wg genpsk > /config/$1/presharedkey && wg genkey | tee /config/$1/privatekey | wg pubkey > /config/$1/publickey"
+name=$1
+docker exec -it wireguard sh -c ""umask 077 & mkdir /config/$name && wg genpsk > /config/$name/presharedkey && wg genkey | tee /config/$name/privatekey | wg pubkey > /config/$name/publickey""
 
 list=$(ls "config")
-privateKey=$(cat "config/$1/privatekey")
-publicKey=$(cat "config/$1/publickey")
-presharedKey=$(cat "config/$1/presharedkey")
+privateKey=$(cat "config/$name/privatekey")
+publicKey=$(cat "config/$name/publickey")
+presharedKey=$(cat "config/$name/presharedkey")
 
 echo "publickey $publickey"
 echo "privatekey $privatekey"
