@@ -4,6 +4,6 @@ privateKey=$(cat "config/$name/privatekey")
 publicKey=$(cat "config/$name/publickey")
 presharedKey=$(cat "config/$name/presharedkey")
 
-echo "publickey $publickey"
+echo "publickey "$publickey""
 echo "privatekey $privatekey"
 echo "presharedkey $presharedkey"
