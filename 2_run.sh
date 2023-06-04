@@ -1,4 +1,5 @@
 PEERS=${1:-0}
+echo "CREATE SERVER WITH $PEERS PEERS"
 
 docker run -d \
   --name=wireguard \
