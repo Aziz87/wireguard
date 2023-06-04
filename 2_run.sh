@@ -8,9 +8,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e SERVERURL=$PEERS \
   -e SERVERPORT=51820 \
-  -e PEERS=30 \
+  -e PEERS=$PEERS \
   -e PEERDNS=auto \
   -e INTERNAL_SUBNET=10.13.13.0 \
   -e ALLOWEDIPS=0.0.0.0/0  \
