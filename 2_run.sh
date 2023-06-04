@@ -1,4 +1,4 @@
-
+PEERS=${1:-0}
 
 docker run -d \
   --name=wireguard \
@@ -7,7 +7,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e SERVERURL=$1 \
+  -e SERVERURL=$PEERS \
   -e SERVERPORT=51820 \
   -e PEERS=30 \
   -e PEERDNS=auto \
