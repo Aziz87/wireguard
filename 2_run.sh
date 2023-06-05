@@ -1,4 +1,4 @@
-PEERS=${1:-0}
+PEERS=${1:-10}
 echo "CREATE SERVER WITH $PEERS PEERS"
 
 docker run -d \
@@ -9,6 +9,7 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Europe/London \
   -e SERVERPORT=51820 \
+  -e PEERS="$PEERS"
   -e PEERDNS=auto \
   -e INTERNAL_SUBNET=10.13.13.0 \
   -e ALLOWEDIPS=0.0.0.0/0  \
