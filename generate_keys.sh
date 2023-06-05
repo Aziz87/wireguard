@@ -2,7 +2,6 @@ docker exec wireguard sh -c "mkdir /config/$name && wg genpsk > /config/$name/pr
 privateKey=$(cat "config/$name/privatekey")
 publicKey=$(cat "config/$name/publickey")
 presharedKey=$(cat "config/$name/presharedkey")
-rm -rf "config/$name";
 echo "publicKey $publicKey"
 echo "privateKey $privateKey"
 echo "presharedKey $presharedKey"
