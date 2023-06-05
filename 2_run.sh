@@ -1,4 +1,4 @@
-PEERS=${1:-10}
+PEERS=${1:-0}
 echo "CREATE SERVER WITH $PEERS PEERS"
 
 docker run -d \
