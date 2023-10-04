@@ -1,8 +1,8 @@
 -# 0 buy Ubuntu 22 hosting 
 
--# 1 Server: install docker SH (1_install_docker.sh)
+-# 1 Server: install docker SH: `sh 1_install_docker.sh`
 
--# 2 Server: run server in docker (2_run.sh)
+-# 2 Server: run server in docker: `sh 2_run.sh <count>`
 
 -# 3 Server: generate keys `sh generate_keys.sh <peer-name>`
 
