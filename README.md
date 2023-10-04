@@ -4,7 +4,7 @@
 
 -# 2 Server: run server in docker, command: `sh 2_run.sh <count>`
 
--# 3 Server: extract configs from docker to server location (3_extract_configs)
+-# 3 Server: extract configs from docker to server location, command `sh 3_extract_configs.sh`
 
 -# 4 Local PC: copy configs to local PC 
 ```
